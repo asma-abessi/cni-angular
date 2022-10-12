@@ -1,0 +1,39 @@
+<html>
+    <body class="text-center" style="background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)) ,url(assets/images/slide4.jpg);">
+     <div class="cover-container d-flex w-100 h-100  mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+            <h1 class="masthead-brand"><div class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-icon rotate-n-15">
+                  <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">CNI <sup></sup></div>
+            </div></h1>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link active"  [routerLink]="['/gestiondesavance']"> Gérer Avance</a>
+              <a class="nav-link "  [routerLink]="['/gestiondesconge']"> Gérer Conge</a>
+              <a class="nav-link "  [routerLink]="['/gestiondesformation']"> Gérer Formation</a>
+              <a class="nav-link"  [routerLink]="['/gestiondestache']">Gérer Tache</a>
+              <a class="nav-link" [routerLink]="['/pointage']">Pointage</a>
+              <a class="nav-link" (click)="logout()">logout</a>
+            </nav>
+          </div>
+     </header>
+    
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Welcome  Superviseur</h1>
+        <p class="lead">objective of our platform is To be able to build a "tailor-made" monitoring device allowing monitoring of project evaluation
+        at the end of evaluating the project a curve to be displayed</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+      </main>
+    
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          
+        </div>
+      </footer>
+    </div>
+    </body>
+</html>

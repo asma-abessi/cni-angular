@@ -1,0 +1,38 @@
+
+<html>
+  <head></head>
+  <body>
+    <app-navabaremp></app-navabaremp>
+    <h2 class="heading">liste des avance</h2>
+    <button class="btn" [routerLink]="['/ajouteravance']">Ajouter</button>
+    
+    
+<div class="parent">
+  <table>
+    
+    <tr class="gh">
+      <th>ID</th>
+      <th>montant</th>
+      <th>discription</th>
+      <th>datedemande</th>
+
+      <th>#</th>
+    </tr>
+    <tr *ngFor="let person of peopleList">
+      <td>{{person.id}}</td>
+      <td>{{person.montant}}</td>
+      <td>{{person.discription}}</td>
+      <td>{{person.datedemande}}</td>
+      
+      <td>
+        <div class="row md-2">
+          <button (click)="delete(person)"><i class="fa fa-trash"></i></button>
+          <button [routerLink]="['/modifier-avance',person.id]"><i class="fas fa-wrench"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+
+<html>
+  <head></head>
+  <body>
+    <app-navabaremp></app-navabaremp>
+    <h2 class="heading">liste des tache</h2>
+    <button class="btn" [routerLink]="['/ajoutertache']">Ajouter</button>
+    
+    <div class="parent">
+      <table>
+        
+        <tr class="gh">
+          <th>ID</th>
+          <th>travail</th>
+          <th>discription</th>
+      
+    
+          <th>#</th>
+        </tr>
+        <tr *ngFor="let person of peopleList">
+          <td>{{person.id}}</td>
+          <td>{{person.travail}}</td>
+          <td>{{person.discription}}</td>
+      
+          
+          <td>
+            <div class="row md-2">
+              <button (click)="delete(person)"><i class="fa fa-trash"></i></button>
+              <button [routerLink]="['/modifier-tache',person.id]"><i class="fas fa-wrench"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    
+
+  </body>
+</html>

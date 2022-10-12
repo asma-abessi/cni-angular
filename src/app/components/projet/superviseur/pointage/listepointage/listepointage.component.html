@@ -1,0 +1,41 @@
+
+<html>
+  <head></head>
+  <body>
+    <app-navbarsup></app-navbarsup>
+    <h2 class="heading">liste des pointage</h2>
+    <button class="btn" [routerLink]="['/ajouterpointage']">Ajouter</button>
+    
+    
+<div class="parent">
+  <table>
+    
+    <tr class="gh">
+      <th>ID</th>
+      <th>present</th>
+      <th>datedeb</th>
+      <th>datefin</th>
+      <th>nbheure</th>
+         
+      <th>#</th>
+    </tr>
+    <tr *ngFor="let person of peopleList">
+      <td>{{person.id}}</td>
+      <td>{{person.present}}</td>
+      <td>{{person.datedeb}}</td>
+      <td>{{person.datefin}}</td>
+      <td>{{person.nbheure}}</td>
+  
+      
+      <td>
+        <div class="row md-2">
+          <button (click)="delete(person)"><i class="fa fa-trash"></i></button>
+          <button [routerLink]="['/modifier-pointage',person.id]"><i class="fas fa-wrench"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+  </body>
+</html>

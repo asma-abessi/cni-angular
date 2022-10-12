@@ -1,0 +1,36 @@
+
+<html>
+  <head></head>
+  <body>
+    <app-navbar></app-navbar>
+    <h2 class="heading">controle</h2>
+   
+    
+
+    <div class="parent">
+      <table>
+        
+        <tr class="gh">
+          <th>ID</th>
+          <th>present</th>
+          <th>datedeb</th>
+          <th>datefin</th>
+          <th>nbheure</th>
+             
+          
+        </tr>
+        <tr *ngFor="let person of peopleList">
+          <td>{{person.id}}</td>
+          <td>{{person.present}}</td>
+          <td>{{person.datedeb}}</td>
+          <td>{{person.datefin}}</td>
+          <td>{{person.nbheure}}</td>
+      
+          
+          
+        </tr>
+      </table>
+    </div>
+
+  </body>
+</html>

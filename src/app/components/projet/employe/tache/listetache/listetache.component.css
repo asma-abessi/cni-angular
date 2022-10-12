@@ -1,0 +1,80 @@
+body{
+  font-family: Montserrat;
+}
+/*
+.heading{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+}*/
+h2{
+  margin-left: 15rem;
+}
+
+.btn{
+  margin-left: 15rem;
+  background-color: #007b5e;
+  color: #fff;
+  border: #007b5e;
+
+}
+.parent{
+  position: absolute;
+  margin-top: 10rem;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.herotext{
+  font-size: 25px;
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 4px;
+  
+}
+.herotext::first-letter{
+  color: #007b5e;
+}
+.herotext:before , .herotext:after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 20%;
+  top: 33px;
+  background: white;
+}
+.herotext:after{
+  right: 78%;
+}
+.herotext:before{
+  left: 78%;
+}
+tr > th{
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.2);
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+tr > td{
+  padding: 12px 10px;
+  color: #000;
+  font-weight: 400;
+}
+tr{
+  transition: 230ms ease-in;
+  border-bottom: 1px solid #fff;
+  will-change: transform,background,cursor;
+}
+tr:not(:first-child):hover{
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.1);
+}
+.gh{
+  background: #007b5e;
+}

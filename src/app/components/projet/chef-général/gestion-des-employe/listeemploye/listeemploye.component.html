@@ -1,0 +1,46 @@
+<html>
+  <head></head>
+  <body>
+    <app-navbar></app-navbar>
+    <h2 class="heading">List employer</h2>
+    <button class="btn" [routerLink]="['/ajouteremploye']">Ajouter</button>
+    
+    <div class="parent">
+      <table>
+        
+        <tr class="gh">
+          <th>ID</th>
+          <th>nom</th>
+          <th>prenom</th>
+          <th>datenaiss</th>
+          <th>email</th>
+          
+          <th>adresse</th>
+          <th>salaire</th>
+          <th>telphone</th>
+          
+          <th>#</th>
+        </tr>
+        <tr *ngFor="let person of peopleList">
+          <td>{{person.id}}</td>
+          <td>{{person.nom}}</td>
+          <td>{{person.prenom}}</td>
+          <td>{{person.datenaiss}}</td>
+          <td>{{person.email}}</td>
+          
+          <td>{{person.adresse}}</td>
+          <td>{{person.salaire}}</td>
+          <td>{{person.telphone}}</td>
+          <td>
+            <div class="row md-2">
+              <button (click)="delete(person)"><i class="fa fa-trash"></i></button>
+              <button [routerLink]="['/modifier-employe',person.id]"><i class="fas fa-wrench"></i> </button>
+                <button [routerLink]="['/get-employe',person.id]">get employee </button>
+             
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
